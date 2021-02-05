@@ -9,5 +9,7 @@ export default DS.Model.extend({
     bedrooms: DS.attr(),
     gameRoom: 'yes',
     coolFactor: 10,
-    description: DS.attr()
+    description: DS.attr(),
+    partyRoom: 'yes',
+    coolLevel: 10
 });
