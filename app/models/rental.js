@@ -7,5 +7,7 @@ export default DS.Model.extend({
     category: DS.attr(),
     image: DS.attr(),
     bedrooms: DS.attr(),
+    gameRoom: 'yes',
+    coolFactor: 10,
     description: DS.attr()
 });
