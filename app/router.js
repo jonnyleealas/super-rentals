@@ -10,7 +10,8 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('rentals', function() {
-    this.route('rental', { path: '/:rental_id' })
+    this.route('show', { path: '/:rental_id' })
+    
   });
   this.route('chris');
 });
