@@ -6,8 +6,9 @@ export default function () {
 
     id: 'grand-old-mansion',
     attributes: {
-      coolLevel: '',
-      partyRoom: '',
+      gameroom: 'yes',
+      coollevel: 10,
+      partyroom: 'yes',
       title: 'Grand Old Mansion',
       owner: 'Veruca Salt',
       city: 'San Francisco',
@@ -21,7 +22,7 @@ export default function () {
     id: 'urban-living',
     attributes: {
       coolLevel: '',
-      partyRoom: '',
+      partyroom: 'No',
       title: 'Urban Living',
       owner: 'Mike Teavee',
       city: 'Seattle',
@@ -35,7 +36,7 @@ export default function () {
     id: 'downtown-charm',
     attributes: {
       coolLevel: '',
-      partyRoom: '',
+      partyroom: 'Yes',
       title: 'Downtown Charm',
       owner: 'Violet Beauregarde',
       city: 'Portland',
