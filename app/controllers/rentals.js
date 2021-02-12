@@ -5,12 +5,12 @@ export default Controller.extend({
         filterByCity(param) {
             if(param !== '') {
                 return this.store
-                .query('rental', { city: param }).then((results) => {
+                .query('guitars', { city: param }).then((results) => {
                   return { query: param, results: results };
                 });
             } else {
                 return this.store
-                .findAll('rental').then((results) => {
+                .findAll('guitars').then((results) => {
                   return { query: param, results: results };
                 });
             }
