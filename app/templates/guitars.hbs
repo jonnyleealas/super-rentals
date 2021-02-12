@@ -1,0 +1,13 @@
+{{log model}}
+    {{#each model as |guitar|}}
+<li>{{guitar.name}}</li>
+<li>{{guitar.make}}</li>
+<li>{{guitar.model}}</li>
+<li>{{guitar.yearMade}}</li>
+<li>{{guitar.description}}</li>
+<li>{{guitar.color}}</li>
+      {{log guitar}}
+    {{/each}}
+
+
+{{outlet}}
