@@ -1,13 +1,63 @@
-{{log model}}
+
+
+{{!-- {{log model}} --}}
     {{#each model as |guitar|}}
-<li>{{guitar.name}}</li>
-<li>{{guitar.make}}</li>
-<li>{{guitar.model}}</li>
-<li>{{guitar.yearMade}}</li>
-<li>{{guitar.description}}</li>
-<li>{{guitar.color}}</li>
-      {{log guitar}}
+
+
+
+ {{!-- <div class="details">
+    <h3>About {{guitar.name}}</h3>
+     
+
+    <div class="detail owner">
+      <span>Guitar Name:</span> {{guitar.name}}
+    </div>
+    <div class="detail type">
+      <span>Make:</span> {{guitar.make}} 
+    </div>
+    <div class="detail location">
+      <span>Model:</span> {{guitar.model}}
+    </div>
+      <div class="detail location">
+      <span>Color:</span> {{guitar.color}}
+    </div>
+    <div class="detail bedrooms">
+      <span>Year Made:</span> {{guitar.yearMade}}
+    </div>
+    <div class="detail description">
+      <span>Description: </span>{{guitar.description}}
+    </div>
+  </div> --}}
+
+    <div class="grid">
+      <div class="grid-item">
+          <div class="card">
+              <div class="card-content">
+                  <h1 class="card-header">About {{guitar.name}}</h1>
+                  
+                  <span>Make:</span> {{guitar.make}} 
+                  <span>Model:</span> {{guitar.model}}
+                  <span>Color:</span> {{guitar.color}}
+                  <span>Year Made:</span> {{guitar.yearMade}}
+                  <p class="card-text">{{guitar.description}}</p>
+                  <button>Submit</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+      {{!-- {{log guitar}} --}}
     {{/each}}
 
 
+
 {{outlet}}
+{{!-- 
+ <article class="rental detailed">
+  <Rental::Image
+    src={{@rental.image}}
+    alt="A picture of {{@rental.title}}"
+  /> --}}
+
+
+
