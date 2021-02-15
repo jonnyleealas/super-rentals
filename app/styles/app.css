@@ -1,30 +1,34 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+
+
 * {
     margin: 0;
     padding: 0;
 
-}
+} 
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
 }
 
 body {
+    font-family: "Popping", sans-serif;
     background-color: #eee;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: c;
-    /* min-height: 100%; */
+    min-height: 100vh;
 }
 
 .grid {
     display: grid;
-    width: 114em;
+    /* width: 114em; */
     grid-gap: 6rem;
-    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
     align-items: start;
-
 }
 
 .grid-item {
@@ -43,29 +47,30 @@ body {
 }
 
 .card-img {
-    display: block;
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
+    /* display: block; */
+    /* width: 100%; */
+    /* height: 20rem; */
+    /* object-fit: cover; */
 }
 
 .card-content {
-    padding: 3rem;
+    height: 19rem;
+    padding: 1rem;
 }
 
 .card-header {
     font-size: 3rem;
     font-weight: 500;
     color: #0d0d0d;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
 }
 
 .card-text {
-    font-size: 1.6rem;
-    letter-spacing: 0.1rem;
-    line-height: 1.7;
-    color: #3d3d3d;
-    margin-bottom: 2.5rem;
+    /* font-size: 1.6rem;  */
+    /* letter-spacing: 0.1rem; */
+    /* line-height: 1.7; */
+    /* color: #3d3d3d; */
+    /* margin-bottom: 2.5rem; */
 
 }
 
