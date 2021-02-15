@@ -1,63 +1,62 @@
+{{#each model as |guitar|}}
 
 
 
-    {{#each model as |guitar|}}
-
-
-
- {{!-- <div class="details">
+{{!-- <div class="details">
     <h3>About {{guitar.name}}</h3>
-     
+
 
     <div class="detail owner">
-      <span>Guitar Name:</span> {{guitar.name}}
+        <span>Guitar Name:</span> {{guitar.name}}
     </div>
     <div class="detail type">
-      <span>Make:</span> {{guitar.make}} 
+        <span>Make:</span> {{guitar.make}}
     </div>
     <div class="detail location">
-      <span>Model:</span> {{guitar.model}}
+        <span>Model:</span> {{guitar.model}}
     </div>
-      <div class="detail location">
-      <span>Color:</span> {{guitar.color}}
+    <div class="detail location">
+        <span>Color:</span> {{guitar.color}}
     </div>
     <div class="detail bedrooms">
-      <span>Year Made:</span> {{guitar.yearMade}}
+        <span>Year Made:</span> {{guitar.yearMade}}
     </div>
     <div class="detail description">
-      <span>Description: </span>{{guitar.description}}
+        <span>Description: </span>{{guitar.description}}
     </div>
-  </div> --}}
+</div> --}}
 
-    <div class="grid">
-      <div class="grid-item">
-          <div class="card">
-              <div class="card-content">
-                  <img class="card-img"/>
-                  <h3 class="card-header">About {{guitar.name}}</h3>
-                  <p class="card-text">Make: {{guitar.make}}</p> 
-                  <p class="card-text">Model: {{guitar.model}}</p> 
-                  <p class="card-text">Color: {{guitar.color}}</p> 
-                  <p class="card-text">Year Made: {{guitar.yearMade}}</p> 
-                  <p class="card-text">Description: {{guitar.description}}</p>
-                  <button>Submit</button>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="grid">
+    <div class="grid-item">
+        <div class="grid-card">
+            <div class="card-col-2">
+                <p>Some image</p>
+                <img class="card-img" />
+            </div>
+            <div class="card-col-1">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-header">About {{guitar.name}}</h3>
+                        <p class="card-text">Make: {{guitar.make}}</p>
+                        <p class="card-text">Model: {{guitar.model}}</p>
+                        <p class="card-text">Color: {{guitar.color}}</p>
+                        <p class="card-text">Year Made: {{guitar.yearMade}}</p>
+                        <p class="card-text">Description: {{guitar.description}}</p>
+                        <button>Submit</button>
+                    </div>
 
-      
-    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{/each}}
 
 
 
 {{outlet}}
-{{!-- 
- <article class="rental detailed">
-  <Rental::Image
-    src={{@rental.image}}
-    alt="A picture of {{@rental.title}}"
-  /> --}}
-
-
-
+{{!--
+<article class="rental detailed">
+    <Rental::Image src={{@rental.image}} alt="A picture of {{@rental.title}}" /> --}}

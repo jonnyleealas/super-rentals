@@ -46,6 +46,22 @@ body {
 
 }
 
+.grid-card {
+    display: grid;
+    grid-template-areas:
+    "column-2 column-1 ";
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.card-col-1 {
+    grid-area: column-1;
+}
+
+.card-col-2 {
+    grid-area: column-2;
+}
+
 .card-img {
     /* display: block; */
     /* width: 100%; */
@@ -54,6 +70,7 @@ body {
 }
 
 .card-content {
+    text-align: center;
     height: 19rem;
     padding: 1rem;
 }
@@ -67,7 +84,7 @@ body {
 
 .card-text {
     /* font-size: 1.6rem;  */
-    /* letter-spacing: 0.1rem; */
+    letter-spacing: 0.1rem;
     /* line-height: 1.7; */
     /* color: #3d3d3d; */
     /* margin-bottom: 2.5rem; */
