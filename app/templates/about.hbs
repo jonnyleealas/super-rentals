@@ -6,6 +6,17 @@
     By building a property rental site, we can simultaneously imagine traveling
     AND building Ember applications.
   </p>
+<button {{action "startNewGuitar" }}>Add Guitar</button><br>
+{{#if newGuitar}}
+  
+  {{input type="text" value=newGuitar.name}}<label>Name</label><br>
+  {{input type="text" value=newGuitar.make}}<label>Make</label><br>
+  {{input type="text" value=newGuitar.model}}<label>model</label><br>
+  {{input type="text" value=newGuitar.color}}<label>Color</label><br>
+  {{input type="text" value=newGuitar.yearMade}}<label>Year Made</label><br>
+  {{input type="text" value=newGuitar.description}}<label>Description</label><br>
+  <button {{action "submitNewGuitar"}}>Submit</button>
+{{/if}}
   {{#link-to "contact" class="button"}}
   Contact Us
   {{/link-to}}
