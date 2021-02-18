@@ -9,7 +9,11 @@ export default Controller.extend({
             console.log("new guitar", this.get("newGuitar"));
         },
         submitNewGuitar(){
-            this.get("newGuitar").save().then(() => {alerts("Successfully Added Guitar")})
+            this.get("newGuitar").save().then(() => {
+                // alerts("Successfully Added Guitar")
+                this.set("newGuitar", null)
+            })
+
         },
 
     }
