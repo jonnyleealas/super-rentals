@@ -2,8 +2,9 @@
   <div class="grid-item">
     <div class="grid-card">
       <div class="card-col-2" class="card-img">
-        <img />
-        <p>Some image</p>
+        <img /><br>
+        <button {{action "deleteGuitar"}} class="button" >Delete</button>
+      
       </div>
       <div class="card-col-1">
         <div class="card">
@@ -19,3 +20,5 @@
     </div>
   </div>
 </div>
+
+{{outlet}}
