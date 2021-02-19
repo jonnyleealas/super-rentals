@@ -7,6 +7,10 @@ export default Controller.extend({
             let destroyId = this.get('destroyId');
             let destroyGuitar = this.get('model').findById('id', destroyId)
             destroyGuitar.destroyRecord();
-        }, 
+        },
+        
+        updateGuitar () {
+            alert("Guitar Updated");
+        }
     }
 });
