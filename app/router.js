@@ -10,8 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('guitars', function() {
-    this.route('show', { path: 'show/:guitar_id' })
-    
+    this.route('show', { path: '/:guitar_id'});
   });
   this.route('chris');
 });
