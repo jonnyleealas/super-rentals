@@ -1,19 +1,29 @@
-<div class="jumbo show-listing">
-  <h2 class="title">{{model.title}}</h2>
-  <div class="right detail-section">
-    <div class="detail owner">
-      <strong>Owner:</strong> {{model.owner}}
+<div class="grid">
+    <div class="grid-item">
+        <div class="grid-card">
+            <div class="card-col-2" class="card-img">
+                <img />
+                <p>Some image</p>
+            </div>
+            <div class="card-col-1">
+                <div class="card">
+                    <div class="card-content">
+            {{#link-to "guitars.show" guitar.id}}
+                        <h3>{{"click hear"}}</h3>
+                        <h3 class="card-header">About {{guitar.name}}</h3>
+            {{/link-to}}
+                        <p class="card-text">Make: {{guitar.make}}</p>
+                        <p class="card-text">Model: {{guitar.model}}</p>
+                        <p class="card-text">Color: {{guitar.color}}</p>
+                        <p class="card-text">Year Made: {{guitar.yearMade}}</p>
+                        <p class="card-text">Description: {{guitar.description}}</p>
+
+
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="detail">
-      <strong>Type:</strong> {{rental-property-type model.category}} - {{model.category}}
-    </div>
-    <div class="detail">
-      <strong>Location:</strong> {{model.city}}
-    </div>
-    <div class="detail">
-      <strong>Number of bedrooms:</strong> {{model.bedrooms}}
-    </div>
-    <p class="description">{{model.description}}</p>
-  </div>
-  <img src="{{model.image}}" class="rental-pic">
 </div>
