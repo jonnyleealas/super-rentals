@@ -3,7 +3,8 @@
     <div class="grid-card">
       <div class="card-col-2" class="card-img">
         <img /><br>
-        <button {{action "deleteGuitar"}} class="button" >Delete</button>
+        {{log model.id "show.hbs"}}
+        <button {{action "deleteGuitar" model.id}} class="button" >Delete</button>
         <button {{action "updateGuitar"}} class="button" >Update</button>
       
       </div>
