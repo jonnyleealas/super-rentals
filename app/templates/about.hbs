@@ -1,21 +1,23 @@
 <div class="jumbo">
   <div class="right tomster"></div>
-  <h2>Add a guitar to your list</h2>
+  <h2>About Guitar Store</h2>
   <p>
-   Click the button and add all your guitars.
+    The Super Rentals website is a delightful project created to explore Ember.
+    By building a property rental site, we can simultaneously imagine traveling
+    AND building Ember applications.
   </p>
-<button class="button" {{action "startNewGuitar"  }}>Add Guitar</button><br>
+<button class="button" {{action "startNewGuitar" }}>Add Guitar</button><br>
 {{#if newGuitar}}
   
-  
-  {{input type="text" placeholder="Make" value=newGuitar.make}}<label></label><br>
-  {{input type="text" placeholder="Model" value=newGuitar.model}}<label></label><br>
-  {{input type="text" placeholder="Color" value=newGuitar.color}}<label></label><br>
-  {{input type="text" placeholder="Year Made" value=newGuitar.yearMade}}<label></label><br>
-  {{input type="text" placeholder="Description" value=newGuitar.description}}<label></label><br>
+  {{input placeholder="Name" type="text" value=newGuitar.name}}<label></label><br>
+  {{input placeholder="Make" type="text" value=newGuitar.make}}<label></label><br>
+  {{input placeholder="Model" type="text" value=newGuitar.model}}<label></label><br>
+  {{input placeholder="Color" type="text" value=newGuitar.color}}<label></label><br>
+  {{input placeholder="Year Made" type="text" value=newGuitar.yearMade}}<label></label><br>
+  {{input placeholder="Description" type="text" value=newGuitar.description}}<label></label><br>
   <button {{action "submitNewGuitar"}}>Submit</button>
-{{/if}}<br>
- 
+{{/if}}
+
 </div>
 
 

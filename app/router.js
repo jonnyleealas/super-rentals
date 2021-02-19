@@ -12,7 +12,6 @@ Router.map(function() {
   this.route('guitars', function() {
     this.route('show', { path: '/:guitar_id'});
   });
-  this.route('chris');
 });
 
 export default Router;
