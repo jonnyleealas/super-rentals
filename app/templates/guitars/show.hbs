@@ -12,42 +12,42 @@
         <div class="card">
           <div class="card-content">
 
+            {{#if isEditing}}
+            {{input placeholder="Make" value=model.make}}<br>
+            {{else}}
             <h3 class="card-text">Make:
-              {{#if isEditing}}
-              {{input value=model.make}}
-              {{else}}
               {{model.make}}
-              {{/if}}
             </h3>
+            {{/if}}
+            {{#if isEditing}}
+            {{input placeholder="Model" value=model.model}}<br>
+            {{else}}
             <p class="card-text">Model:
-            {{#if isEditing}}
-            {{input value=model.model}}
-            {{else}}
-            {{model.model}}
-            {{/if}}
+              {{model.model}}
             </p>
+            {{/if}}
+            {{#if isEditing}}
+            {{input placeholder="Color" value=model.color}}<br>
+            {{else}}
             <p class="card-text">Color:
-            {{#if isEditing}}
-            {{input value=model.color}}
-            {{else}}
-            {{model.color}}
-            {{/if}}
+              {{model.color}}
             </p>
+            {{/if}}
 
+            {{#if isEditing}}
+            {{input placeholder="Year Made" value=model.yearMade}}<br>
+            {{else}}
             <p class="card-text">Year Made:
-              {{#if isEditing}}
-              {{input value=model.yearMade}}
-              {{else}}
               {{model.yearMade}}
-              {{/if}}
-              </p>
-            <p class="card-text">Description:
-              {{#if isEditing}}
-              {{input value=model.description}}
-              {{else}}
-               {{model.description}}
-               {{/if}}
-               </p>
+            </p>
+            {{/if}}
+            {{#if isEditing}}
+            {{input placeholder="Description" value=model.description}}<br>
+            {{else}}
+            <p class="card-text">Condition:
+              {{model.description}}
+            </p>
+            {{/if}}
             {{#if isEditing}}
             <button {{action "updateGuitar" }}>Submit</button><button {{action "cancelEdit" }}>Cancel</button>
             {{/if}}
