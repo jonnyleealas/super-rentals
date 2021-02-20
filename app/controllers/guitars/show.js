@@ -2,53 +2,48 @@ import Controller from '@ember/controller';
 
 
 export default Controller.extend({
-    
+
     actions: {
 
-        deleteGuitar() { 
-      
-        this.get('model').destroyRecord().then(()=>{
-            alert("Deleted")
-            this.transitionToRoute("guitars")
-        });
-    },
+        deleteGuitar() {
 
-    isEditing(){
-        this.set("isEditing", true)
-    },
+            this.get('model').destroyRecord().then(() => {
+                alert("Deleted")
+                this.transitionToRoute("guitars")
+            });
+        },
 
-    updateGuitar(){
-        this.get("model").save().then(()=>{
-            this.set("isEditing", false)
-        })
-    console.log("update guitar")
-    },
+        isEditing() {
+            this.set("isEditing", true)
+        },
 
-    cancelEdit(){
-        this.get('model').rollbackAttributes();
-        this.set("isEditing", false);
+        updateGuitar() {
+            this.get("model").save().then(() => {
+                this.set("isEditing", false)
+            })
 
-    },
+        },
 
-    modalButton () {
-        let modalBg = document.querySelector(".modal-bg");
-        let modalBtn = document.querySelector(".modal-btn");
-        modalBtn.addEventListener("click", function(){
+        cancelEdit() {
+            this.get('model').rollbackAttributes();
+            this.set("isEditing", false);
+
+        },
+
+        modalButton() {
+            let modalBg = document.querySelector(".modal-bg");
             modalBg.classList.add("bg-active")
-        });
-    },
 
-    modalClose () {
-        let modalCls = document.querySelector(".modal-close");
-        let modalBg = document.querySelector(".modal-bg");
-        modalCls.addEventListener("click", function(){
+        },
+
+        modalClose() {
+            let modalBg = document.querySelector(".modal-bg");
             modalBg.classList.remove("bg-active")
-        });
-    },
 
-       
+        },
+
+
     }
 });
 
-         
-    
+
