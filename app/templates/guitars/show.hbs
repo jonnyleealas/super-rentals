@@ -1,0 +1,61 @@
+<div class="grid">
+  <div class="grid-item">
+    <div class="grid-card">
+      <div class="card-col-2 card-img">
+        <img /><br>
+        {{log model.id "show.hbs"}}
+        <button {{action "deleteGuitar" model.id}} class="button">Delete</button>
+        <button {{action "isEditing" }} class="button">Edit</button>
+
+      </div>
+      <div class="card-col-1">
+        <div class="card">
+          <div class="card-content">
+
+            <h3 class="card-text">Make:
+              {{#if isEditing}}
+              {{input value=model.make}}
+              {{else}}
+              {{model.make}}
+              {{/if}}
+            </h3>
+            <p class="card-text">Model:
+            {{#if isEditing}}
+            {{input value=model.model}}
+            {{else}}
+            {{model.model}}
+            {{/if}}
+            </p>
+            <p class="card-text">Color:
+            {{#if isEditing}}
+            {{input value=model.color}}
+            {{else}}
+            {{model.color}}
+            {{/if}}
+            </p>
+
+            <p class="card-text">Year Made:
+              {{#if isEditing}}
+              {{input value=model.yearMade}}
+              {{else}}
+              {{model.yearMade}}
+              {{/if}}
+              </p>
+            <p class="card-text">Description:
+              {{#if isEditing}}
+              {{input value=model.description}}
+              {{else}}
+               {{model.description}}
+               {{/if}}
+               </p>
+            {{#if isEditing}}
+            <button {{action "updateGuitar" }}>Submit</button><button {{action "cancelEdit" }}>Cancel</button>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{outlet}}
