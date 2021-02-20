@@ -380,6 +380,16 @@ p {
     top: -50px;
 }
 
+.johnfrusciante2 {
+  background: url(../assets/images/teaching.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+
+  position: relative;
+  top: -50px;
+}
 
 .johnfrusciante {
   background: url(../assets/images/johnfrusciante.png);
@@ -390,6 +400,17 @@ p {
   margin-left: 30%;
   position: relative;
   top: 2.2em;
+}
+
+.johnfrusciante2 {
+  background: url(../assets/images/johnfrusciante.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+
+  position: relative;
+  top: -50px;
 }
 
 .screen-reader{

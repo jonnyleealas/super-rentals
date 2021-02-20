@@ -4,29 +4,52 @@
       <div class="card-col-2 card-img">
         <img /><br>
         {{log model.id "show.hbs"}}
-        <button {{action "deleteGuitar" model.id}} class="button" >Delete</button>
-        <button {{action "isEditing"}} class="button" >Edit</button>
-      
+        <button {{action "deleteGuitar" model.id}} class="button">Delete</button>
+        <button {{action "isEditing" }} class="button">Edit</button>
+
       </div>
       <div class="card-col-1">
         <div class="card">
           <div class="card-content">
-         
-            <h3 class="card-text">Make: 
-               {{#if isEditing}}
-            {{input value=model.make}}
-            
-            {{else}}
+
+            <h3 class="card-text">Make:
+              {{#if isEditing}}
+              {{input value=model.make}}
+              {{else}}
               {{model.make}}
-            {{/if}}
-              
+              {{/if}}
             </h3>
-            <p class="card-text">Model: {{model.model}}</p>
-            <p class="card-text">Color: {{model.color}}</p>
-            <p class="card-text">Year Made: {{model.yearMade}}</p>
-            <p class="card-text">Description: {{model.description}}</p>
+            <p class="card-text">Model:
             {{#if isEditing}}
-            <button {{action "updateGuitar"}}>Submit</button><button {{action "cancelEdit"}}>Cancel</button>
+            {{input value=model.model}}
+            {{else}}
+            {{model.model}}
+            {{/if}}
+            </p>
+            <p class="card-text">Color:
+            {{#if isEditing}}
+            {{input value=model.color}}
+            {{else}}
+            {{model.color}}
+            {{/if}}
+            </p>
+
+            <p class="card-text">Year Made:
+              {{#if isEditing}}
+              {{input value=model.yearMade}}
+              {{else}}
+              {{model.yearMade}}
+              {{/if}}
+              </p>
+            <p class="card-text">Description:
+              {{#if isEditing}}
+              {{input value=model.description}}
+              {{else}}
+               {{model.description}}
+               {{/if}}
+               </p>
+            {{#if isEditing}}
+            <button {{action "updateGuitar" }}>Submit</button><button {{action "cancelEdit" }}>Cancel</button>
             {{/if}}
           </div>
         </div>
