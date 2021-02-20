@@ -26,7 +26,7 @@ body {
 .grid {
     display: grid;
     /* width: 114em; */
-    grid-gap: 6rem;
+    grid-gap: 7rem;
     grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
     align-items: start;
 }
@@ -38,6 +38,7 @@ body {
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.2s;
+    margin-bottom: .3em;
 }
 
 .grid-item:hover {

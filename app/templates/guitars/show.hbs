@@ -5,17 +5,29 @@
         <img /><br>
         {{log model.id "show.hbs"}}
         <button {{action "deleteGuitar" model.id}} class="button" >Delete</button>
-        <button {{action "updateGuitar"}} class="button" >Update</button>
+        <button {{action "isEditing"}} class="button" >Edit</button>
       
       </div>
       <div class="card-col-1">
         <div class="card">
           <div class="card-content">
-            <h3 class="card-text">Make: {{model.make}}</h3>
+         
+            <h3 class="card-text">Make: 
+               {{#if isEditing}}
+            {{input value=model.make}}
+            
+            {{else}}
+              {{model.make}}
+            {{/if}}
+              
+            </h3>
             <p class="card-text">Model: {{model.model}}</p>
             <p class="card-text">Color: {{model.color}}</p>
             <p class="card-text">Year Made: {{model.yearMade}}</p>
             <p class="card-text">Description: {{model.description}}</p>
+            {{#if isEditing}}
+            <button {{action "updateGuitar"}}>Submit</button><button {{action "cancelEdit"}}>Cancel</button>
+            {{/if}}
           </div>
         </div>
       </div>
