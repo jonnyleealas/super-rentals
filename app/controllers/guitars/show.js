@@ -1,6 +1,8 @@
 import Controller from '@ember/controller';
 
+
 export default Controller.extend({
+    
     actions: {
 
         deleteGuitar() { 
@@ -31,9 +33,16 @@ export default Controller.extend({
     modalButton () {
         let modalBg = document.querySelector(".modal-bg");
         let modalBtn = document.querySelector(".modal-btn");
-        
         modalBtn.addEventListener("click", function(){
             modalBg.classList.add("bg-active")
+        });
+    },
+
+    modalClose () {
+        let modalCls = document.querySelector(".modal-close");
+        let modalBg = document.querySelector(".modal-bg");
+        modalCls.addEventListener("click", function(){
+            modalBg.classList.remove("bg-active")
         });
     },
 
