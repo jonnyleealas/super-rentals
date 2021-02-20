@@ -27,6 +27,16 @@ export default Controller.extend({
         this.set("isEditing", false);
 
     },
+
+    modalButton () {
+        let modalBg = document.querySelector(".modal-bg");
+        let modalBtn = document.querySelector(".modal-btn");
+        
+        modalBtn.addEventListener("click", function(){
+            modalBg.classList.add("bg-active")
+        });
+    },
+
        
     }
 });

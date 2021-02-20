@@ -6,7 +6,7 @@
         {{log model.id "show.hbs"}}
         <button {{action "deleteGuitar" model.id}} class="button">Delete</button>
         <button {{action "isEditing" }} class="button">Edit</button>
-
+        <button {{action "modalButton"}} class="modal-btn button">Modal</button>
       </div>
       <div class="card-col-1">
         <div class="card">
@@ -57,5 +57,15 @@
     </div>
   </div>
 </div>
-
+<div class="modal-bg">
+  <div class="modal">
+    <h2>Subscribe</h2>
+    <label for="name">Name</label>
+    <input type="text" name="name">
+    <label type="text"></label>
+    <label for="email">Email</label>
+    <input type="email">
+    <button>Subscribe</button>
+  </div>
+</div>
 {{outlet}}
