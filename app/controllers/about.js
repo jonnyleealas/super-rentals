@@ -12,6 +12,7 @@ export default Controller.extend({
         },
         submitNewGuitar () {
             this.get("newGuitar").save().then(() => {
+                console.log("THis is submit guitar")
                 this.set("newGuitar", null)
                 alert("Successfully Added Guitar")
             })
