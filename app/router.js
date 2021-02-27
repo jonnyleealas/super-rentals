@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('guitars', function() {
     this.route('show', { path: '/:guitar_id'});
   });
+  this.route('login');
 });
 
 export default Router;
