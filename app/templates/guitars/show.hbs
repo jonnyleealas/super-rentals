@@ -2,11 +2,9 @@
   <div class="grid-item">
     <div class="grid-card">
       <div class="card-col-2 card-img">
-        <img /><br>
-        {{log model.id "show.hbs"}}
+       <br>
         <button {{action "modalButton" }} class="modal-btn button">Delete</button>
         <button {{action "isEditing" }} class="button">Edit</button>
-      
       </div>
       <div class="card-col-1">
         <div class="card">
@@ -19,6 +17,7 @@
               {{model.make}}
             </h3>
             {{/if}}
+
             {{#if isEditing}}
             {{input placeholder="Model" value=model.model}}<br>
             {{else}}
@@ -26,6 +25,7 @@
               {{model.model}}
             </p>
             {{/if}}
+
             {{#if isEditing}}
             {{input placeholder="Color" value=model.color}}<br>
             {{else}}
@@ -41,6 +41,7 @@
               {{model.yearMade}}
             </p>
             {{/if}}
+
             {{#if isEditing}}
             {{input placeholder="Description" value=model.description}}<br>
             {{else}}
@@ -48,6 +49,7 @@
               {{model.description}}
             </p>
             {{/if}}
+
             {{#if isEditing}}
             <button {{action "updateGuitar" }}>Submit</button><button {{action "cancelEdit" }}>Cancel</button>
             {{/if}}
@@ -61,9 +63,8 @@
 <div class="modal-bg">
   <div class="modal">
     <h2>Sure You Want To Delete?</h2>
-    
-       <button {{action "deleteGuitar" model.id}} class="button">Delete</button>
-       <span {{action "modalClose"}} class="modal-close">X</span>
+    <button {{action "deleteGuitar" model.id}} class="button">Delete</button>
+    <span {{action "modalClose" }} class="modal-close">X</span>
   </div>
 </div>
 

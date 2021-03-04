@@ -6,7 +6,6 @@ export default Controller.extend({
     actions: {
 
         deleteGuitar() {
-
             this.get('model').destroyRecord().then( () => {
                 alert("Deleted")
                 this.transitionToRoute("guitars")
@@ -15,6 +14,7 @@ export default Controller.extend({
 
         isEditing() {
             this.set("isEditing", true)
+            
         },
 
         updateGuitar() {
@@ -22,25 +22,21 @@ export default Controller.extend({
                 this.set("isEditing", false)
                 alert("Update Complete")
             })
-
         },
 
         cancelEdit() {
             this.get('model').rollbackAttributes();
             this.set("isEditing", false);
-
         },
 
         modalButton() {
             let modalBg = document.querySelector(".modal-bg");
             modalBg.classList.add("bg-active")
-
         },
 
         modalClose() {
             let modalBg = document.querySelector(".modal-bg");
             modalBg.classList.remove("bg-active")
-
         },
     }
 });
