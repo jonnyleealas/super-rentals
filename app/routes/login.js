@@ -2,8 +2,7 @@ import Route from '@ember/routing/route';
 
 $.ajaxSetup({
     dataType: "json",
-    contentType: "application/json; charset=utf-8"
-
+    contentType: "application/json; charset=utf-8",
 });
 
 export default Route.extend({
@@ -16,12 +15,12 @@ export default Route.extend({
                 password: this.get("controller.password"),
             };
 
-            $.post("http://localhost:9000/login", JSON.stringify(obj)).done( () => {
+            $.post("http://localhost:9000/login", JSON.stringify(obj)).done(() => {
                 this.replaceWith("guitars");
-            }).fail( e => {
+            }).fail(e => {
                 alert(e.responseJSON.errors);
             });
         },
     },
-    
+
 });

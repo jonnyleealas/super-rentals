@@ -6,6 +6,6 @@ export default DS.RESTAdapter.extend({
  
     corsWithCredentials: true,
     crossDomain: true,
-    xhrFields: { withCredentials: true }
+    xhrFields: { withCredentials: true },
 });
   

@@ -1,13 +1,13 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-    actions:{
+    actions: {
 
         handleLogout() {
-            this.set("loginButton", false)
-            $.get("http://localhost:9000/logout").done( () => {
-            this.transitionToRoute("login")
-            })
+            this.set("loginButton", false);
+            $.get("http://localhost:9000/logout").done(() => {
+                this.transitionToRoute("login");
+            });
         },
-    }
+    },
 });
