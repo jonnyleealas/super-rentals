@@ -11,13 +11,10 @@ $.ajaxSetup({
 export default Route.extend({
 
     beforeModel() {
-
-        $.get("http://localhost:9000/checkSession").done(() => {
+        $.get("http://localhost:9000/checkSession").done( () => {
             this.replaceWith("contact");
-
-        }).fail(() => {
-            this.replaceWith("login")
-
+        }).fail( () => {
+            this.replaceWith("login");
         })
     },
 

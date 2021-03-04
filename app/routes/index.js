@@ -12,13 +12,10 @@ $.ajaxSetup({
 export default Route.extend({
 
     beforeModel() {
-
         $.get("http://localhost:9000/checkSession").done(() => {
             this.replaceWith("guitars");
-
         }).fail(() => {
             this.replaceWith("login")
-
         })
     },
 

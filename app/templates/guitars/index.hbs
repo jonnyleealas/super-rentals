@@ -4,8 +4,6 @@
     <div class="grid-item">
         <div class="grid-card">
             <div class="card-col-2 johnfrusciante">
-                
-                
             </div>
             <div class="card-col-1">
                 <div class="card">
@@ -15,14 +13,10 @@
                         <p class="card-text">Color: {{guitar.color}}</p>
                         <p class="card-text">Year Made: {{guitar.yearMade}}</p>
                         <p class="card-text">Condition: {{guitar.description}}</p>
-
-            {{#link-to "guitars.show" guitar.id}}
-                  Settings      
-            {{/link-to}}
-
-                       
+                        {{#link-to "guitars.show" guitar.id}}
+                        Settings
+                        {{/link-to}}
                     </div>
-
                 </div>
             </div>
         </div>
