@@ -1,20 +1,20 @@
 <div class="container">
   <div class="menu">
     {{#link-to "index"}}
-      <h1>
-        <em>Guitar Store</em>
-      </h1>
+    <h1>
+      <em>Guitar Store</em>
+    </h1>
     {{/link-to}}
     <div class="links">
       {{#link-to "about" class="menu-about"}}
-        Add Guitar
+      Add Guitar
       {{/link-to}}
       {{#link-to "contact" class="menu-contact"}}
-        Contact
+      Contact
       {{/link-to}}
+      <a {{action "handleLogout" }}>Log Out</a>
     </div>
   </div>
-      <button class="button" {{action  "handleLogout"}}>Logout</button>
   <div class="body">
     {{outlet}}
   </div>
