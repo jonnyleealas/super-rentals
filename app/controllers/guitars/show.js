@@ -7,7 +7,7 @@ export default Controller.extend({
 
         deleteGuitar() {
 
-            this.get('model').destroyRecord().then(() => {
+            this.get('model').destroyRecord().then( () => {
                 alert("Deleted")
                 this.transitionToRoute("guitars")
             });
@@ -18,8 +18,9 @@ export default Controller.extend({
         },
 
         updateGuitar() {
-            this.get("model").save().then(() => {
+            this.get("model").save().then( () => {
                 this.set("isEditing", false)
+                alert("Update Complete")
             })
 
         },
@@ -41,8 +42,6 @@ export default Controller.extend({
             modalBg.classList.remove("bg-active")
 
         },
-
-
     }
 });
 
