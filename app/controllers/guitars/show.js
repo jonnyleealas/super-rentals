@@ -21,6 +21,7 @@ export default Controller.extend({
             this.get("model").save().then( () => {
                 this.set("isEditing", false)
                 alert("Update Complete")
+                this.transitionToRoute("guitars")
             })
         },
 
