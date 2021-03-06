@@ -7,22 +7,21 @@ export default Controller.extend({
 
         deleteGuitar() {
             this.get('model').destroyRecord().then( () => {
-                alert("Deleted")
-                this.transitionToRoute("guitars")
+                alert("Deleted");
+                this.transitionToRoute("guitars");
             });
         },
 
         isEditing() {
-            this.set("isEditing", true)
-            
+            this.set("isEditing", true); 
         },
 
         updateGuitar() {
             this.get("model").save().then( () => {
-                this.set("isEditing", false)
-                alert("Update Complete")
-                this.transitionToRoute("guitars")
-            })
+                this.set("isEditing", false);
+                alert("Update Complete");
+                this.transitionToRoute("guitars");
+            });
         },
 
         cancelEdit() {
@@ -32,12 +31,12 @@ export default Controller.extend({
 
         modalButton() {
             let modalBg = document.querySelector(".modal-bg");
-            modalBg.classList.add("bg-active")
+            modalBg.classList.add("bg-active");
         },
 
         modalClose() {
             let modalBg = document.querySelector(".modal-bg");
-            modalBg.classList.remove("bg-active")
+            modalBg.classList.remove("bg-active");
         },
     }
 });
