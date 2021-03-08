@@ -1,0 +1,25 @@
+{{outlet}}
+
+{{log model}}
+{{#each model as |people|}}
+<div class="grid">
+    <div class="grid-item">
+        <div class="grid-card">
+            <div class="card-col-2 johnfrusciante">
+            </div>
+            <div class="card-col-1">
+                <div class="card">
+                    <div class="card-content">
+ {{#link-to "people.show" people.id}}
+                        <h3>{{"click hear"}}</h3>
+                        {{/link-to}}
+                        <p class="card-text">Name: {{people.name}}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/each}}

@@ -1,0 +1,20 @@
+<div class="jumbo">
+  <div class="right johnfrusciante2"></div>
+  <h2>Add a person for free!</h2>
+  <p>
+    A person its free!
+  </p>
+
+  {{#unless newPerson}}
+ {{log newPerson}}
+  <button class="button" {{action "startNewPerson" }}>Add Person</button><br>
+  {{/unless}}
+
+  {{#if newPerson}}
+  {{input placeholder="Name" type="text" value=newPerson.name}}<label></label><br>
+  <button class="button" {{action "submitNewPerson" }}>Submit</button>
+  {{/if}}
+
+</div>
+
+{{outlet}}
