@@ -5,10 +5,10 @@ export default Controller.extend({
 
     actions: {
 
-        deleteGuitar() {
+        deletePerson() {
             this.get('model').destroyRecord().then( () => {
                 alert("Deleted");
-                this.transitionToRoute("guitars");
+                this.transitionToRoute("people");
             });
         },
 
@@ -16,11 +16,11 @@ export default Controller.extend({
             this.set("isEditing", true); 
         },
 
-        updateGuitar() {
+        updatePerson() {
             this.get("model").save().then( () => {
                 this.set("isEditing", false);
                 alert("Update Complete");
-                this.transitionToRoute("guitars");
+                this.transitionToRoute("people");
             });
         },
 

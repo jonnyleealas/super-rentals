@@ -1,0 +1,44 @@
+
+<div class="grid">
+  <div class="grid-item">
+    <div class="grid-card">
+      <div class="card-col-2 card-img">
+       <br>
+        <button {{action "modalButton" }} class="modal-btn button">Delete</button>
+        <button {{action "isEditing" }} class="button">Edit</button>
+      </div>
+      <div class="card-col-1">
+        <div class="card">
+          <div class="card-content">
+
+            {{#if isEditing}}
+            {{input placeholder="Person" value=model.name}}<br>
+            {{else}}
+            <h3 class="card-text">Name:
+              {{model.name}}
+            </h3>
+            {{/if}}
+
+       
+
+        
+
+            {{#if isEditing}}
+            <button {{action "updatePerson" }}>Submit</button><button {{action "cancelEdit" }}>Cancel</button>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg">
+  <div class="modal">
+    <h2>Sure You Want To Delete?</h2>
+    <button {{action "deletePerson" model.id}} class="button">Delete</button>
+    <span {{action "modalClose" }} class="modal-close">X</span>
+  </div>
+</div>
+
+{{outlet}}

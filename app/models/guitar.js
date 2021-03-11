@@ -7,5 +7,4 @@ export default DS.Model.extend({
     yearMade: DS.attr('number'),
     description: DS.attr('string'),
     color: DS.attr('string'),
-
 });
