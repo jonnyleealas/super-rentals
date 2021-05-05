@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="menu">
-    {{#link-to "index"}}
+    {{#link-to "guitars"}}
     <h1>
       <em>Guitar Store</em>
     </h1>
@@ -10,14 +10,15 @@
       {{#link-to "about" class="menu-about"}}
       Add Guitar
       {{/link-to}}
-      {{#link-to "test" class="menu-about"}}
-      Test
+      {{#link-to "index" class="menu-about"}}
+      View People
+      {{/link-to}}
+      
+      {{#link-to "add-person" class="menu-about"}}
+      Add People
       {{/link-to}}
       {{#link-to "contact" class="menu-contact"}}
       Contact
-      {{/link-to}}
-      {{#link-to "add-person" class="menu-about"}}
-      Add Person
       {{/link-to}}
       <a {{action "handleLogout" }}>Log Out</a>
     </div>

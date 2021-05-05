@@ -2,7 +2,7 @@
   <div class="right johnfrusciante2"></div>
   <h2>About Guitar Store</h2>
   <p>
-    CRUD all the guitars in the world!!!
+   All guitars added using Java queries!!!
   </p>
 
   {{#unless newGuitar}}
@@ -10,7 +10,7 @@
   {{/unless}}
 
   {{#if newGuitar}}
-  {{input placeholder="Make" type="text" value=newGuitar.make}}<label></label><br>
+  {{input placeholder="Make" type="text" value=newGuitar.make required="required"}}<label></label><br>
   {{input placeholder="Model" type="text" value=newGuitar.model}}<label></label><br>
   {{input placeholder="Color" type="text" value=newGuitar.color}}<label></label><br>
   {{input placeholder="Year Made" type="text" value=newGuitar.yearMade}}<label></label><br>

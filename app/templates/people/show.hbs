@@ -1,9 +1,8 @@
-
 <div class="grid">
   <div class="grid-item">
     <div class="grid-card">
       <div class="card-col-2 card-img">
-       <br>
+        <br>
         <button {{action "modalButton" }} class="modal-btn button">Delete</button>
         <button {{action "isEditing" }} class="button">Edit</button>
       </div>
@@ -18,10 +17,6 @@
               {{model.name}}
             </h3>
             {{/if}}
-
-       
-
-        
 
             {{#if isEditing}}
             <button {{action "updatePerson" }}>Submit</button><button {{action "cancelEdit" }}>Cancel</button>
